@@ -1,0 +1,353 @@
+/* COMMON */
+body{
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+img{
+  display: block;
+}
+
+a{
+  text-decoration: none;
+}
+
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+/* HEADER */
+
+header {
+  width: 100%;
+  height: 120px;
+  background-color: #f6f5f0;
+  border-bottom: 1px solid #c8c8c8;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  transition: .5s ease-in-out;
+}
+
+header.shrink {
+  height: 4em;
+  background-color: #f6f5f0;
+}
+
+header.shrink div ul li {
+  line-height: 10em;
+}
+
+header > .inner {
+  height: 120px;
+}
+
+header #logo {
+  position: absolute;
+  top: 0;
+  bottom: 0; /*부모요소 기준으로 위치 찍기 */
+}
+
+header .main-menu {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+}
+
+header .main-menu .item {
+  cursor: pointer;
+}
+
+header .main-menu .item .item__name {
+  padding: 10px ;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+
+header .main-menu .item .scroll {
+  color: inherit; /* 하이퍼링크의 색상 제거 */
+}
+
+header .main-menu .item .item__name:hover {
+  color: powderblue;
+  transition: 0.5s;
+}
+
+header ul.main-menu li{
+  position: relative;
+}
+
+header ul.main-menu li::before{ /*가상 요소 선택자*/
+  content: "";
+  display: block;
+  width: 1px;
+  height: 12px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+header ul.main-menu li:first-child:before{ /*가상 클래스 선택자*/
+  display: none;
+}
+
+header .title {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
+  color: gray;
+}
+
+header .title a{
+  font-size: 40px;
+  padding: 11px 16px;
+  display: block;
+}
+
+/* SECTION */
+
+.dashboard {
+  font-size: 30px;
+  align-items: center;
+  /* margin-top: 120px; */
+  display: flex;
+  width: 1349px;
+  margin: 120px auto 0; /*화면 중앙으로 모아주는 부분*/
+}
+
+.main {
+  width: 530px;
+  height: 537px;
+  margin-right: 60px;
+}
+
+.title1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-top: 20px;
+  text-decoration: underline;
+  text-align: center;
+  background-color: powderblue;
+  border-radius: 35px;
+}
+
+/* PICTURE */
+
+.picture .promotion {
+  height: 550px;
+  background-color: #f6f5ef;  
+  position: relative;
+}
+
+.picture .promotion .swiper-container {
+  width: calc(750px * 3);
+  height: 553px;
+  position: absolute; 
+  top: 10px;
+  left: 50%;
+  margin-left: calc((750px * 3) / -2);
+}
+
+.my {
+  width: 480px;
+  height: 480px;
+  margin-left: 130px;
+}
+
+.picture .promotion .swiper-slide {
+  opacity: 0.5;
+  transition: opacity 1s;
+}
+
+.picture .promotion .swiper-slide-active {
+  opacity: 1;
+}
+
+.picture .promotion .swiper-pagination {
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+.picture .promotion .swiper-pagination .swiper-pagination-bullet{
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  outline: none;
+}
+
+.picture .promotion .swiper-pagination .swiper-pagination-bullet:last-child{
+  margin-right: 0;
+}
+
+.picture .promotion .swiper-prev,
+.picture .promotion .swiper-next {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 300px;
+  z-index: 1;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.picture .promotion .swiper-prev {
+  left: 50%;
+  margin-left: -480px;
+}
+
+.picture .promotion .swiper-next {
+  right: 50%;
+  margin-right: -480px;
+}
+
+.picture .promotion .swiper-prev:hover,
+.picture .promotion .swiper-next:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.title2 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-top: 20px;
+  text-decoration: underline;
+  text-align: center;
+  background-color: powderblue;
+  border-radius: 35px;
+}
+
+/* INTRODUCE*/
+
+.profile {
+  display: flex;
+  width: 1349px;
+  margin: auto;
+}
+
+.profile .write {
+  margin: 40px;
+  font-size : 19px;
+  font-weight: 700;
+}
+
+
+/* SKILL */
+
+.skill {
+  font-size: 50px;
+  font-weight: 700;
+  margin-top: 20px;
+  text-decoration: underline;
+  text-align: center;
+  background-color: powderblue;
+  border-radius: 35px;
+}
+
+.capability-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 1349px;
+  margin: 30px auto;
+}
+
+.capability-section .capability {
+  display: flex;
+  margin-bottom: 0px;
+}
+
+.capability-section .capability .capability-icon {
+  width: 100px;
+  height: 100px;
+  padding: 15px;
+  border: 2px solid black;
+  border-radius: 50px;
+  margin: auto;
+}
+
+.recent-works {
+  display: flex;
+  flex-direction: column;
+  width: 1349px;
+  margin: auto;
+}
+
+.recent-works .article {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 70px;
+}
+
+.recent-works .article .thumbnail1,
+.recent-works .article .thumbnail2,
+.recent-works .article .thumbnail3,
+.recent-works .article .thumbnail4,
+.recent-works .article .thumbnail5,
+.recent-works .article .thumbnail6 {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  margin-left: 30px;
+}
+
+h3 {
+  font-size: 50px;
+  margin-left: 30px;
+}
+
+.article-comment {
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.more {
+  font-size: 15px;
+  margin-left: 30px;
+  color: inherit; /* 하이퍼링크의 색상 제거 */
+}
+
+.more:hover {
+  background-color: powderblue;
+  transition: 0.5s;
+}
+
+/* CONTACT ME */
+
+.contact {
+  font-size: 50px;
+  font-weight: 700;
+  margin-top: 20px;
+  text-decoration: underline;
+  text-align: center;
+  background-color: powderblue;
+  border-radius: 35px;
+}
+
+.link{
+  display: flex;
+  justify-content: center;
+}
+
+.github, .instagram, .mail {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  margin-bottom: 50px;
+}
