@@ -289,21 +289,59 @@ header .title a{
   margin: auto;
 }
 
-.recent-works .article {
+.recent-works .article1,
+.recent-works .article2,
+.recent-works .article3,
+.recent-works .article4,
+.recent-works .article5,
+.recent-works .article6,
+.recent-works .article7,
+.recent-works .article8 {
   display: flex;
   flex-direction: row;
   margin-bottom: 70px;
 }
 
-.recent-works .article .thumbnail1,
-.recent-works .article .thumbnail2,
-.recent-works .article .thumbnail3,
-.recent-works .article .thumbnail4,
-.recent-works .article .thumbnail5,
-.recent-works .article .thumbnail6 {
+.recent-works .article1 {
+  margin-right: 100px;
+}
+
+.recent-works .article3 {
+  margin-right: 280px;
+}
+
+.recent-works .article5 {
+  margin-right: 250px;
+}
+
+.recent-works .article7 {
+  margin-right: 190px;
+}
+
+.chapter_one,
+.chapter_two,
+.chapter_three,
+.chapter_four {
   display: flex;
-  width: 200px;
-  height: 200px;
+
+}
+
+.thumbnail_title {
+  font-size: 40px;
+  margin-left: 20px;
+} 
+
+.recent-works .article1 .thumbnail1,
+.recent-works .article2 .thumbnail2,
+.recent-works .article3 .thumbnail3,
+.recent-works .article4 .thumbnail4,
+.recent-works .article5 .thumbnail5,
+.recent-works .article6 .thumbnail6,
+.recent-works .article7 .thumbnail7,
+.recent-works .article8 .thumbnail8 {
+  display: flex;
+  width: 150px;
+  height: 150px;
   margin-left: 30px;
 }
 
@@ -313,7 +351,7 @@ h3 {
 }
 
 .article-comment {
-  font-size: 20px;
+  font-size: 15px;
   margin-left: 30px;
 }
 
